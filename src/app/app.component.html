@@ -1,0 +1,30 @@
+<div class="search-box">
+  <div class="form-group">
+    <label for="employee-id">Search id</label>
+    <input type="text" class="form-control" id="employee-id"  placeholder="Enter employee id" [(ngModel)]="searchId">
+  </div>
+  <button class="btn btn-dark" (click)="search()">Search</button>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Employee ID</th>
+      <th scope="col">Employee name</th>
+      <th scope="col">Employee salary</th>
+      <th scope="col">Employee anual salary</th>
+      <th scope="col">Employee age</th>
+      <th scope="col">Profile image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeeList">
+      <td>{{employee.id}}</td>
+      <td>{{employee.employee_name}}</td>
+      <td>{{employee.employee_salary}}</td>
+      <td>{{employee.employee_anual_salary}}</td>
+      <td>{{employee.employee_age}}</td>
+      <td>{{employee.profile_image}}</td>
+    </tr>
+  </tbody>
+</table>
